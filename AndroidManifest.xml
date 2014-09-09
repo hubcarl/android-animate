@@ -16,5 +16,6 @@
         <activity android:name=".rotate.RotateAnimation"/>
         <activity android:name=".scale.ScaleAnimationActivity"/>
         <activity android:name=".translate.TranslateAnimationActivity"/>
+        <activity android:name=".translate.SlideSecondActivity"/>
     </application>
 </manifest>

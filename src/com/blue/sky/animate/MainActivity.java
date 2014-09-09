@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import com.blue.sky.animate.scale.ScaleAnimationActivity;
+import com.blue.sky.animate.translate.SlideSecondActivity;
 
 /**
  * 在Android系统中，Animation包含4个基本动画效果：
@@ -25,6 +26,19 @@ public class MainActivity extends Activity {
 
         final View showView = findViewById(R.id.txt_face_in);
         final View hideView = findViewById(R.id.txt_face_out);
+
+
+        final View txt_activity_left_right = findViewById(R.id.txt_activity_left_right);
+        txt_activity_left_right.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, SlideSecondActivity.class);
+                startActivity(intent);
+                //设置切换动画，从右边进入，左边退出 overridePendingTransition 方法必须在startActivity()或者 finish()方法的后面。
+                overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
+            }
+        });
 
         showView.setAlpha(0f);
         showView.setVisibility(View.VISIBLE);

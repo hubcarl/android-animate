@@ -23,5 +23,14 @@
             android:text="淡出"
             android:textSize="24sp"
             />
+
+    <TextView
+            android:id="@+id/txt_activity_left_right"
+            android:layout_marginTop="24dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity淡出淡入"
+            android:textSize="24sp"
+            />
 </LinearLayout>
 
